@@ -1,4 +1,6 @@
-export const alphabet = {
+type AlphabetEntry = {rom: string; hira: string; kata: string}
+
+export const alphabet: {[section: string]: AlphabetEntry[]} = {
 	basics: [
 		{rom: 'a', hira: 'あ', kata: 'ア'},
 		{rom: 'i', hira: 'い', kata: 'イ'},
