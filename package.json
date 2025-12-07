@@ -1,0 +1,35 @@
+{
+	"name": "@vdegenne/japanese",
+	"version": "0.1.1",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./lib/index.js",
+			"types": "./lib/index.d.ts"
+		}
+	},
+	"files": [
+		"./lib/",
+		"./audio/"
+	],
+	"scripts": {
+		"build": "wireit"
+	},
+	"devDependencies": {
+		"typescript": "^5.9.3",
+		"wireit": "^0.14.12"
+	},
+	"wireit": {
+		"build": {
+			"command": "tsc --pretty",
+			"clean": "if-file-deleted",
+			"files": [
+				"./tsconfig.json",
+				"./src"
+			],
+			"output": [
+				"./lib"
+			]
+		}
+	}
+}
