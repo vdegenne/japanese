@@ -1,4 +1,4 @@
-type AlphabetEntry = {rom: string; hira: string; kata: string}
+export type AlphabetEntry = {rom: string; hira: string; kata: string}
 
 export const alphabet: {[section: string]: AlphabetEntry[]} = {
 	basics: [
