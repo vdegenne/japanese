@@ -1,21 +1,27 @@
 {
 	"name": "@vdegenne/japanese",
-	"version": "0.1.4",
+	"version": "0.1.7",
 	"type": "module",
 	"exports": {
 		".": {
 			"import": "./lib/index.js",
 			"types": "./lib/index.d.ts"
+		},
+		"./jp-words.json": {
+			"import": "./jp-words.json"
 		}
 	},
 	"files": [
 		"./lib/",
-		"./audio/"
+		"./audio/",
+		"./jp-words.json"
 	],
 	"scripts": {
 		"build": "wireit"
 	},
 	"devDependencies": {
+		"@vdegenne/kuroshiro": "^0.1.2",
+		"asian-regexps": "^5.1.0",
 		"typescript": "^5.9.3",
 		"wireit": "^0.14.12"
 	},
